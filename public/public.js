@@ -1,6 +1,5 @@
-define(["public/goods_model","public/banner.jQuery"],function(response){
-
-	//顶部广告
+require(["public/jquery-2.0.0"],function(){
+//顶部广告
 	var flag = false;
 	$(".close-advi").on("click",function(){
 		$(".advi").stop().slideUp(200,"linear",function(){
@@ -33,50 +32,8 @@ define(["public/goods_model","public/banner.jQuery"],function(response){
 	$(".wb_weixin").on("mouseenter",function(){
 		document.querySelector(".to_wanbiao_img").src = "img/3.png";
 	})
-	//轮播图
 	
-	$(".banner").hover(function(){
-		$("#btn_left").stop().animate({"right":"920px"},300,"swing");
-		$("#btn_right").stop().animate({"left":"1130px"},300,"swing");
-	},function(){
-		$("#btn_left").stop().animate({"right":"990px"},300,"swing");
-		$("#btn_right").stop().animate({"left":"1200px"},300,"swing");
-	})
-	
-	$(".banner_bg ul li:odd").css("background","#332424");
-	$(".banner_bg ul li:even").css("background","#402d2d");
-	var mask;
-	$(".banner_bg ul li").hover(function(){
-		mask = $("<div>");
-		mask.css({
-			"position":"absolute",
-			"zIndex":2,
-			"height":document.body.clientHeight,
-			"width":"100%",
-			"background":"rgba(0,0,0,0.3)"
-		})
-		$(".banner_bg").prepend(mask);
-	},function(){
-		if(mask){
-			mask.remove();	
-		}
-	})
-	$(".banner_bg ul li").eq(6).off("mouseenter");
-	
-	var banner_data;
-	$.ajax({
-		url: "data/banner_data.json",
-		success: function(res){
-					res.forEach(function(item){
-						var $a =  response.init(item);
-						$("#btn_left").before($a);
-					})
-				$(".banner_bg").myBanner(0,{"left":"#btn_left","right":"#btn_right"});
-			}
-	});
-	
-	
-	//悬浮固定元素
+//悬浮固定元素
 	$(".talk_close").hover(function(){
 		$(".talk_close").css({
 			"transform": "rotate(180deg)",
@@ -135,90 +92,7 @@ define(["public/goods_model","public/banner.jQuery"],function(response){
 	$(".to_top").on("click",function(){
 		$("body,html").animate({"scrollTop":"0"},300);
 	})
-	//图片导航	
-	$.ajax({
-		url:"data/w_list_slide.json",
-		success:function(res){
-			res.forEach(function(item){
-				response.init(item,".w_list_slide");
-			})
-		}
-	})
 	
-	
-	//闪购特惠
-	
-	$.ajax({
-		url:"data/w_fast.json",
-		success:function(res){
-			res.forEach(function(item){
-				response.init(item,".w_fast_right");
-			})
-		}
-	})
-	
-	$.ajax({
-		url:"data/w_fast_foot.json",
-		success:function(res){
-			res.forEach(function(item){
-				var $a =  response.init(item);
-				var $li = $("<li>");		
-				$li.append($a);
-				$(".w_fast_foot ul").append($li);
-			})
-		}
-	})
-	
-	//热卖推荐
-	
-	$.ajax({
-		url:"data/hot_data.json",
-		success:function(res){
-			res.forEach(function(item){
-				var $a =  response.init(item);
-				var $div = $("<div>");
-				$div.append($a);
-				$(".hot_item").append($div);
-			})
-		}
-	})	
-	//人气店铺
-	$.ajax({
-		url:"data/popularShop.json",
-		success:function(res){
-			res.forEach(function(item){
-				response.init(item,".popularityShop");
-			})
-		}
-	})	
-	//无标题图片展示
-	$.ajax({
-		url:"data/no_title_pic.json",
-		success:function(res){
-			res.forEach(function(item){
-				var $a =  response.init(item);
-				var $li = $("<li>");			
-				$li.append($a);
-				$(".show_item_bottom ul").append($li);
-			})
-		}
-	})	
-	//晒单分享
-	$.ajax({
-		url:"data/shall_data.json",
-		success:function(res){
-			res.forEach(function(item){	
-				response.init(item,".shall");
-			})
-			$(".shall a img").each(function(i){
-			   $(".shall a img").eq(i).hover(function(){
-					$(".shall a img").eq(i).css({"transform":"scale(1.1)","transition":"all 1.5s"})
-				},function(){
-					$(".shall a img").eq(i).css({"transform":"scale(1)","transition":"all 1.5s"})
-				})
-			});
-		}
-	})
 	//footer
 	var $ul = $(".in_right ul");
 	var $img = $(".in_right img");
@@ -255,5 +129,4 @@ define(["public/goods_model","public/banner.jQuery"],function(response){
 	$(".more_link").eq(1).on("click",function(){
 		$(".wb_more_link").eq(1).toggle(400);
 	})
-	
 })

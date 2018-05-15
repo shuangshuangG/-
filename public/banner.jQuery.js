@@ -1,4 +1,4 @@
-require(["public/jquery-2.0.0"],function(){
+define(["public/jquery-2.0.0"],function(){
 	+function($){
 		$.fn.myBanner = function(index,options){
 			new Banner(this,index,options);
