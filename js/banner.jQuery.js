@@ -20,7 +20,7 @@
 				this.index ++;
 				console.log(this.index)
 				if(this.index == this.count) this.index = 0;
-				showBanner(this.index,this.bgEle);
+				this.showBanner(this.index,this.bgEle);
 			}.bind(this),3000)
 			
 			this.bgEle.hover(function(){
@@ -29,20 +29,20 @@
 				this.banner_timer = setInterval(function(){
 					this.index ++;
 					if(this.index == this.count) this.index = 0;
-					showBanner(this.index,this.bgEle);
+					this.showBanner(this.index,this.bgEle);
 				}.bind(this),3000)
 			}.bind(this))
 			
 			$(this.options.left).on("click",function(){
 				this.index --;
 				if(this.index < 0) this.index = this.count - 1;
-				showBanner(this.index,this.bgEle);
+				this.showBanner(this.index,this.bgEle);
 			}.bind(this));
 			
 			$(this.options.right).on("click",function(){
 				this.index ++;
 				if(this.index == this.count) this.index = 0;
-				showBanner(this.index,this.bgEle);
+				this.showBanner(this.index,this.bgEle);
 			}.bind(this));
 			
 		},
