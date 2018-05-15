@@ -1,0 +1,22 @@
+.detail_uper{
+	width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.detail_uper_left{
+	float: left;
+	border: 1px solid pink;
+	position: relative;
+	width: 480px;
+	height: 480px;
+	background: url("https://image8.wbiao.co/shop/8c832ead2c414945b4db786a4d235b9a.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff");
+}
+.detail_uper_left_img{
+	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+}
+/*.detail_uper_left_img img:hover{
+	transform: scale(2);
+	transition: all 1s;
+}*/
