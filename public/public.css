@@ -153,6 +153,7 @@ a:hover{
 	overflow: hidden;
 	background: #fff;
 	z-index: 2;
+	display: none;
 }
 
 .to_wanbiao_hidden img {
@@ -203,6 +204,7 @@ a:hover{
 	text-align: center;
 	background: #fff;
 	z-index: 2;
+	display: none;
 }
 
 .fw_link {

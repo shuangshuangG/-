@@ -1,5 +1,14 @@
 define(["public/goods_model","public/banner.jQuery"],function(response){
-
+	//如果用户已经登录则获取用户登录信息
+	var nameIndex = window.location.href.indexOf("name");
+	if(nameIndex+1){
+		var leng = window.location.href.length;
+		var name = window.location.href.substr(nameIndex+5,leng);
+		$(".to_login").html("欢迎您："+ name);
+		$(".to_login").attr("href","###");
+		$(".to_register").attr("href","login.html");
+		$(".to_register").html("退出");
+	}
 	//顶部广告
 	var flag = false;
 	$(".close-advi").on("click",function(){
@@ -10,6 +19,7 @@ define(["public/goods_model","public/banner.jQuery"],function(response){
 	
 	// 顶栏导航动画
 	$(".to_wanbiao_hidden").stop().slideUp(0);
+//	$(".to_wanbiao_hidden").css({"display":"block"});
 	$(".to_fuwu_link").stop().slideUp(0);
 	$(".relative").hover(function(){
 		$(".to_wanbiao").toggleClass("active");

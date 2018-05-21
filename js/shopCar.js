@@ -4,11 +4,8 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 		url:"php/user_list.php",
 		data:{type:"shopCar"}
 	}).then(function(res){
-//		console.log(JSON.parse(res));
 		var result = JSON.parse(res);
 		result.forEach(function(item){
-//			console.log(item)
-//			console.log(item.price.substr(2,item.price.length-2)* item.num)
 			var str = `<div class="goods_list" data-id="${item.id}">
 					<!--ajax渲染内容-->
 					<span class="span"></span>
@@ -85,14 +82,16 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 		$(".span").on("click",function(){
 			$(this).toggleClass("classActive");
 
-			if($(this).hasClass("classActive")){
-				goodsNum++;
-				priceCount += $(this).nextAll(".goods_conut").text()*1;
-			}
-			else
-			{
-				goodsNum--;
-				priceCount -= $(this).nextAll(".goods_conut").text()*1;
+			if(!$(this).hasClass("title")){
+				if($(this).hasClass("classActive")){
+					goodsNum++;
+					priceCount += $(this).nextAll(".goods_conut").text()*1;
+				}
+				else
+				{
+					goodsNum--;
+					priceCount -= $(this).nextAll(".goods_conut").text()*1;
+				}	
 			}
 			$(".numGoods").text(goodsNum);
 			$(".numPrice").text(priceCount);

@@ -66,7 +66,10 @@ define(["public/reg_model","public/jquery-2.0.0"],function(reg){
 			$.ajax(opt).then(function(res){
 				if(res == "-1") alert("该用户不存在!");
 				else if(res == "0") alert("密码错误!");
-				else location.href = "index.html";
+				else{
+					var name = $("#username").val();
+					location.href = "index.html?name="+name;
+				}
 			})
 		}
 		else alert("请先完善信息！");
