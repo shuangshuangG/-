@@ -8,10 +8,10 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 		var result = JSON.parse(res);
 		result.forEach(function(item){
 //			console.log(item)
-			console.log(item.price.substr(2,item.price.length-2)* item.num)
+//			console.log(item.price.substr(2,item.price.length-2)* item.num)
 			var str = `<div class="goods_list" data-id="${item.id}">
 					<!--ajax渲染内容-->
-					<span class="active span"></span>
+					<span class="span"></span>
 					<img src="${item.href}"/>
 					<span class="goods_title">${item.title}</span>
 					<span class="goods_price"> ${item.price}</span>
@@ -73,15 +73,50 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 		})
 		//删
 		$(".goods_opt").on("click",function(){
-//			console.log($(this).parent().attr("data-id"))
 			var id = $(this).parent().attr("data-id");
 			results.delShopCar({
 				id:id
 			})
 		})
 		//选择按钮控制
+		var flag = true;
+		var priceCount = 0;
+		var goodsNum = 0;
 		$(".span").on("click",function(){
-			$(this).toggleClass("active");
+			$(this).toggleClass("classActive");
+
+			if($(this).hasClass("classActive")){
+				goodsNum++;
+				priceCount += $(this).nextAll(".goods_conut").text()*1;
+			}
+			else
+			{
+				goodsNum--;
+				priceCount -= $(this).nextAll(".goods_conut").text()*1;
+			}
+			$(".numGoods").text(goodsNum);
+			$(".numPrice").text(priceCount);
+		})
+		
+		$(".first_span").on("click",function(){
+			flag = !flag;
+			if(flag){
+				priceCount = 0;
+				goodsNum = 0;
+				$(".span").each(function(index){
+					$(".span").eq(index).removeClass("classActive");	
+				})
+			}
+			else{
+				priceCount = 0;
+				goodsNum = $(".span").length-3;
+				$(".span").each(function(index){
+					$(".span").eq(index).addClass("classActive");
+					priceCount += $(".span").eq(index).nextAll(".goods_conut").text()*1;
+				})
+			}
+			$(".numGoods").text(goodsNum);
+			$(".numPrice").text(priceCount);
 		})
 	})
 })

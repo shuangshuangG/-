@@ -42,7 +42,7 @@
 	margin: 0 20px;
 	-webkit-user-select: none;
 }
-.active{
+.classActive{
 	background: url(../img/a.png) -576px -233px;
 	border: 1px solid #cc5252 !important;
 }
@@ -132,17 +132,30 @@
 	margin-right: 240px;
 }
 .car_foot ul li:nth-of-type(3){
-	margin-right:230px;
+	margin-right:180px;
 }
 .car_foot ul li:nth-of-type(4){
-	margin-right:25px;
+	margin-right:32px;
 }
 .car_foot ul li input{
 	height: 60px;
 	width: 180px;
 	background: #cc5252;
 	margin-top: -3px;
+	color: white;
 }
 .goods_opt{
 	cursor: pointer;
+}
+.numPrice{
+	display: inline-block;
+	width: 40px;
+	color: red;
+}
+.numGoods{
+	color: red;
+	font-size: 14px;
+	display: inline-block;
+	width: 16px;
+	text-align: center;
 }
