@@ -1,0 +1,170 @@
+.head{
+	width: 1000px;
+	height: 75px;
+	margin: 25px auto;
+}
+.main{
+	position: relative;
+	width: 100%;
+	height: 580px;
+	background: url("http://image8.wbiao.co/mall/2e49038fe8354c7b9a496db8c8092353.jpg") no-repeat center,#ebe2dd;
+}
+.main_body{
+	width: 1000px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+.input_item{
+	background: #fff;
+	height: 460px;
+	width: 380px;
+	position: absolute;
+	right: 0;
+	top: 50px;
+}
+.login_tab{
+	overflow: hidden;
+    width: 269px;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+}
+.login_tab span{
+	height: 24px;
+    line-height: 24px;
+    font-size: 20px;
+    color: grey;
+    float: left;
+    width: 134px;
+    text-align: center;
+    cursor: pointer;
+}
+.login_tab .sp1{
+	color: #cc5252;
+	border-right: 1px solid #ddd;
+}
+.mobile,.mobile_code{
+	width: 300px;
+    margin: 15px auto;
+    position: relative;
+}
+.mobile input,.mobile_code input{
+	width: 100%;
+    display: block;
+    box-sizing: border-box;
+    height: 44px;
+    margin-top: 12px;
+    line-height: 44px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    position: relative;
+}
+::-webkit-input-placeholder{
+	color: #ccc;
+}
+#btn{
+	width: 300px;
+    display: block;
+    box-sizing: border-box;
+    height: 44px;
+    margin: 12px auto;
+    line-height: 44px;
+    background: #cc5252;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+    cursor: pointer;
+}
+.gegis,.pos {
+	width: 300px;
+	margin: 0 auto;
+}
+.gegis a{
+	color: #999;
+    font-size: 14px;
+    text-decoration: none;
+}
+.pos{
+	text-align: right;
+	bottom: 20px;
+	right: 40px;
+	font-size: 16px;
+    color: #ccc;
+    line-height: 22px;
+    position: absolute;
+}
+.pos a{
+    font-size: 16px;
+    color: #999;
+    line-height: 22px;
+    text-decoration: none;
+}
+.W_pt_footer{
+	border-top: 1px solid #eee;
+    padding: 50px 0;
+    width: 640px;
+    margin: 0 auto;
+}
+.W_pt_footer p {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+.item_left{
+	display: block;
+}
+.item_right{
+	display: none;
+}
+.img_item{
+	width: 300px;
+    height: 183px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+}
+.img_item img{
+    width: 183px;
+    height: 183px;
+}
+.text_item {
+    font-size: 16px;
+    color: #666;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.text_item em {
+    font-size: 16px;
+    color: #cc5252;
+    cursor: pointer;
+}
+.text_item i {
+    font-size: 16px;
+    color: #999;
+    font-style: normal;
+}
+.item_right>a{
+	margin-left: 97px;
+}
+label{
+	position: relative;
+	top: 8px;
+	display: none;
+	color: red;
+}
+#code{
+	display: inline-block;
+	background: #ddd;
+	position: absolute;
+	height: 44px;
+	width: 70px;
+	top: 0;
+	right: 0;
+	line-height: 44px;
+	text-align: center;
+	-webkit-user-select: none;
+}

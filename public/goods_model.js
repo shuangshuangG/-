@@ -9,10 +9,14 @@ define(["public/jquery-2.0.0"],function(){
 			this.item = item;
 			var $a = $("<a>");
 			$a.attr("href",item.link);
+			$a.attr("target","_blank");
 			
 			var $img = $("<img>");
 			$img.attr("src",item.href);
-			if(item.id) $img.attr("data-id",item.id);
+			if(item.id){
+				 $img.attr("data-id",item.id);
+				 $a.attr("href",item.link+"?id="+item.id);
+			}
 			if(item.color) $img.attr("data-color",item.color);
 			
 			$a.append($img);

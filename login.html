@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div class="head">
+			<img src="https://www.wbiao.cn/public/images/1/logo-icon.png"/>
+		</div>
+		
+		<div class="main">
+			<div class="main_body">
+				<div class="input_item">
+					<p class="login_tab">
+						<span class="sp1">会员登录</span>
+						<span class="sp2">扫码登录</span>
+					</p>
+					<div class="item_left">
+						<p class="mobile">
+							<input type="text" id="username" placeholder="用户名" />
+							<label>支持英文、数字，"-"、"_"的组合4-20个字符！</label>
+						</p>
+						<p class="mobile">
+							<input type="password" id="password" placeholder="密码" />
+							<label>密码仅支持数字字母下划线组合！</label>
+						</p>
+						<p class="mobile_code">
+							<input type="text" placeholder="验证码" />
+							<span id="code">1234</span>
+							<label>验证码不正确</label>
+						</p>
+						<input type="button" id="btn" value="立即登录" />
+						<p class="gegis"><a href="register.html">免费注册</a></p>
+						<p class="pos">
+							<a href="###">账号密码</a> |
+							<a href="###">社交登录</a>
+						</p>
+					</div>
+					
+					<div class="item_right">
+						<p class="img_item">
+							<img src="img/qr.png"/>
+						</p>
+						<p class="text_item">使用<em>万表APP</em>扫码登录<br><i>在首页顶部搜索栏点击扫一扫</i></p>
+						<a href="###"><img src="img/download.png"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="W_pt_footer">
+			<p>万表网名表商城 版权所有 2008-2017 ICP备案证书号:粤ICP备09108738号 网监备案:4401060103141</p>
+			<p> 广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
+			<p> Copyright 2008-2017 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
+		</div>
+		
+		<script type="text/javascript" src="public/require.js" ></script>
+		<script type="text/javascript">
+			require(["js/login"]);
+		</script>
+	</body>
+</html>

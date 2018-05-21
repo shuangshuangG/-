@@ -1,0 +1,104 @@
+body{
+	background: #fafafa;
+}
+.title{
+	width: 988px;
+	margin: 45px auto;
+	position: relative;
+}
+.form_table{
+	width: 988px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #eee;
+}
+.form_table .head{
+	font-weight: 400;
+    font-size: 28px;
+    color: #000;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+.item{
+	width: 340px;
+    height: 38px;
+    line-height: 34px;
+    border: 1px solid #e8e8e8;
+    font-size: 12px;
+    background-color: transparent;
+    margin: 8px auto;
+    position: relative;
+}
+.item label{
+	position: absolute;
+	left: 360px;
+	top: 0;
+	width: 260px;
+	color: red;
+	font-weight: 600;
+	display: none;
+}
+.item span{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin-left: 8px;
+	margin-right: 12px;
+}
+.phone_num span{
+	background: url(../img/a.png) -571px -23px;
+}
+.username span{
+	background: url(../img/a.png) -571px 3px;
+}
+.email span{
+	background: url(../img/a.png) -569px -363px;
+}
+.password span{
+	background: url(../img/a.png) -570px -49px;
+}
+.confirm span{
+	background: url(../img/a.png) -570px -49px;
+}
+.recommed{
+	margin-top: 20px;
+}
+.form_table>input{
+	width: 340px;
+    height: 38px;
+    font-size: 14px;
+    background: #b32424;
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    display: block;
+    margin: 35px auto 0;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+.form_table>p{
+	font-size: 12px;
+    color: #999;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    line-height: 38px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.form_table>p a{
+	text-decoration: none;
+    color: #666;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.recommed input{
+	padding-left: 10px;
+    width: 326px;
+}
+::-webkit-input-placeholder{
+	color: #ccc;
+}
