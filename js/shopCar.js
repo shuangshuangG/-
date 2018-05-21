@@ -73,7 +73,11 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 		})
 		//删
 		$(".goods_opt").on("click",function(){
-			
+//			console.log($(this).parent().attr("data-id"))
+			var id = $(this).parent().attr("data-id");
+			results.delShopCar({
+				id:id
+			})
 		})
 		//选择按钮控制
 		$(".span").on("click",function(){

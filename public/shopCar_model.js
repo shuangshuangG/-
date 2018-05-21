@@ -1,14 +1,11 @@
 define(["public/jquery-2.0.0"],function(){
 	function shopCarOption(){
-//		this.addShopCar({id:"5"});
+
 	}
 	shopCarOption.prototype = {
 		constructor:shopCarOption,
 		addShopCar(item){
 			this.shopCarOpt(item,"add");
-		},
-		reduceShopCar(item){
-			
 		},
 		delShopCar(item){
 			this.shopCarOpt(item,"del");
