@@ -84,12 +84,14 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 
 			if(!$(this).hasClass("title")){
 				if($(this).hasClass("classActive")){
-					goodsNum++;
+					//num_item  $(this).nextAll(".num_item").find(".num").val();
+//					console.log($(this).nextAll(".num_item").find(".num").val());
+					goodsNum += $(this).nextAll(".num_item").find(".num").val()*1;
 					priceCount += $(this).nextAll(".goods_conut").text()*1;
 				}
 				else
 				{
-					goodsNum--;
+					goodsNum -= $(this).nextAll(".num_item").find(".num").val()
 					priceCount -= $(this).nextAll(".goods_conut").text()*1;
 				}	
 			}
@@ -108,9 +110,11 @@ require(["public/shopCar_model","public/jquery-2.0.0"],function(results){
 			}
 			else{
 				priceCount = 0;
-				goodsNum = $(".span").length-3;
+				goodsNum = 0;
 				$(".span").each(function(index){
 					$(".span").eq(index).addClass("classActive");
+					if(index != 0 && index != 1 && index != $(".span").length-1)
+						goodsNum += $(".span").eq(index).nextAll(".num_item").find(".num").val()*1;
 					priceCount += $(".span").eq(index).nextAll(".goods_conut").text()*1;
 				})
 			}

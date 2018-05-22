@@ -109,10 +109,16 @@
     line-height: 22px;
 }
 .goods_price{
-	margin: 0 50px;
+	margin: 0 38px;
+	display: inline-block;
+	width: 52px;
+	text-align: center;
 }
 .goods_conut{
 	margin: 0 90px 0 35px;
+	display: inline-block;
+	width: 44px;
+	text-align: center;
 }
 .car_foot{
 	width: 100%;

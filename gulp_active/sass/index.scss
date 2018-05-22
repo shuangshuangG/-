@@ -1,0 +1,67 @@
+$pink:#ffd9de; //定义变量
+$bg:background;
+.exbg{           //定义类
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+body{
+    #{$bg}: $pink; //变量引用
+}
+.active_body_bg{
+    width: 100%;
+    overflow: hidden;
+    #{$bg}: $pink;
+}
+.active_body{
+    margin: 0 auto;
+    @extend .exbg; //继承类
+}
+#inp_search{
+    #{$bg}: $pink;
+}
+.foot_icon{
+    #{$bg}: #fff;
+}
+img{
+    vertical-align: top;
+}
+.big_img,.meddle_img,.small_img{
+    @extend .exbg;
+    img{             //元素嵌套
+        float: left;
+    }
+}
+.goods_item{
+    @extend .exbg;
+    li{
+        float: left;
+        width: 260px;
+        height: 426px;
+        padding: 20px;
+        #{$bg}: #fff;
+    }    
+    .imgBg{
+        height: 275px;
+        width: 285px;
+    }
+    @for $i from 1 to 9{//循环语句
+        .imgBg-#{$i}{
+            #{$bg}: url("../img/bgImg#{$i}.jpg");
+        }
+    }
+    .detail{
+        height: 108px;
+        width: 212px;
+        margin: 30px auto;
+        text-align: left;
+        padding-left: 50px;
+        h2{
+            font-size: 22px;
+            color: red;
+        }
+        p{
+            text-align: left;
+        }
+    }
+}

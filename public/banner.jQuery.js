@@ -19,7 +19,6 @@ define(["public/jquery-2.0.0"],function(){
 				this.showBanner(this.index,this.bgEle);
 				this.banner_timer = setInterval(function(){
 					this.index ++;
-					console.log(this.index)
 					if(this.index == this.count) this.index = 0;
 					this.showBanner(this.index,this.bgEle);
 				}.bind(this),3000)
